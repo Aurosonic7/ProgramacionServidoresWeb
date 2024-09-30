@@ -1,0 +1,111 @@
+/* Estilo general de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    color: white;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+a:hover {
+    background-color: #0056b3;
+}
+.btn-eliminar,
+.btn-actualizar {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-eliminar {
+    background-color: #e74c3c;
+    color: white;
+}
+.btn-eliminar:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+.btn-eliminar:active {
+    background-color: #a93226;
+    transform: scale(1);
+}
+.btn-actualizar {
+    background-color: #3498db;
+    color: white;
+}
+.btn-actualizar:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+.btn-actualizar:active {
+    background-color: #1f618d;
+    transform: scale(1);
+}
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+    a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    th, td {
+        padding: 6px;
+        font-size: 12px;
+    }
+    a {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

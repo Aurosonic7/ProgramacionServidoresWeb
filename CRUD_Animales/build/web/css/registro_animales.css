@@ -1,0 +1,115 @@
+/* styles.css */
+
+/* Estilo general de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinear elementos en columna */
+    min-height: 100vh;
+}
+
+/* Estilo para el título */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el formulario */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Estilo para los elementos del formulario */
+form p {
+    margin-bottom: 15px;
+}
+
+/* Estilo para las etiquetas */
+form label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Estilo para los inputs */
+form input[type="text"],
+form input[type="number"] {
+    width: calc(100% - 20px); /* Ajuste de ancho */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover y active del botón */
+button[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button[type="submit"]:active {
+    background-color: #3e8e41;
+    transform: scale(1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    form input[type="text"],
+    form input[type="number"] {
+        padding: 6px;
+    }
+
+    button[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 10px;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    form input[type="text"],
+    form input[type="number"] {
+        width: 100%; /* Ajustar al 100% en pantallas pequeñas */
+    }
+
+    button[type="submit"] {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
