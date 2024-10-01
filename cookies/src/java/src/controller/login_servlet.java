@@ -71,7 +71,7 @@ public class login_servlet extends HttpServlet {
                     }
                     cookie.setPath("/");
                     response.addCookie(cookie);
-                    request.getRequestDispatcher("/jsp/usuario.jsp").forward(request, response);
+                    response.sendRedirect(request.getContextPath() + "/jsp/usuario.jsp");
                 } else {
                     request.getRequestDispatcher("/jsp/error.jsp").forward(request, response);
                 }
