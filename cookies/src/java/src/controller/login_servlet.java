@@ -65,7 +65,7 @@ public class login_servlet extends HttpServlet {
                 if(BCrypt.checkpw(password, hashPassword)){
                     Cookie cookie = new Cookie("matricula",matricula);
                     if(request.getParameter("recordar") != null && request.getParameter("recordar").equals("on")) {
-                        cookie.setMaxAge(60*60*24); // 5 minutos
+                        cookie.setMaxAge(60*60*24); // 1 dia
                     } else {
                         cookie.setMaxAge(60*5);
                     }

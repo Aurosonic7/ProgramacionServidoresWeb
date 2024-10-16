@@ -22,6 +22,11 @@ import model.Animal;
 
 @WebServlet(name = "NewServletAnimal", urlPatterns = {"/NewServletAnimal"})
 public class NewServletAnimal extends HttpServlet {
+    
+    Connection conn = null;
+    PreparedStatement stmt = null;
+    ResultSet rs = null;
+    Conexion conexion = new Conexion();
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
@@ -30,10 +35,6 @@ public class NewServletAnimal extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Animal> animales = new ArrayList<>();
-        Connection conn = null;
-        PreparedStatement stmt = null;
-        ResultSet rs = null;
-        Conexion conexion = new Conexion();
         try {
             conn = conexion.getConnection();
         
@@ -59,7 +60,6 @@ public class NewServletAnimal extends HttpServlet {
             misesion.setAttribute("animales", animales);
 
             response.sendRedirect("views/mostrar_animales.jsp");
-
         } catch (SQLException e) {
             e.printStackTrace();
             throw new ServletException("Error al conectar a la base de datos", e);
@@ -131,7 +131,6 @@ public class NewServletAnimal extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String idString = request.getParameter("id");
-        Conexion conexion = new Conexion(); 
 
         if (idString == null || idString.trim().isEmpty()) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
@@ -206,8 +205,7 @@ public class NewServletAnimal extends HttpServlet {
             response.getWriter().write("ID es requerido para la actualización.");
             return;
         }
-
-        Connection conn = null;
+        
         PreparedStatement ps = null;
 
         try {
