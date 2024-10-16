@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Página de Inicio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .container {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 300px;
+            }
+
+            h1 {
+                font-size: 24px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            form {
+                margin-bottom: 15px;
+            }
+
+            input[type="submit"] {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 4px;
+                width: 100%;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
+            .footer {
+                margin-top: 20px;
+                font-size: 14px;
+                color: #777;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Bienvenido</h1>
+            <form action="/Proyecto/jsp/registro.jsp">
+                <input type="submit" value="Registro" />
+            </form>
+            <form action="/Proyecto/jsp/login.jsp">
+                <input type="submit" value="Login" />
+            </form>
+            <div class="footer">
+                © 2024 Proyecto Laboratorio de servidores web
+            </div>
+        </div>
+    </body>
+</html>
