@@ -60,6 +60,6 @@
         response.sendRedirect("tablaPersona.jsp");
     } else {
         // Mostrar enlace para intentar nuevamente si hay errores
-        out.println("<br><a href='formulario.jsp'>Regresar al formulario</a>");
+        out.println("<br><a href='formularioPersona.jsp'>Regresar al formulario</a>");
     }
 %>
