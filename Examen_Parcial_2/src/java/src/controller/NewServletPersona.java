@@ -101,9 +101,9 @@ public class NewServletPersona extends HttpServlet {
             ps.setDouble(5, persona.getAltura());
 
             int rowsInserted = ps.executeUpdate();
-            if (rowsInserted > 0) {
+            if (rowsInserted > 0) 
                 System.out.println("¡La persona fue insertado exitosamente en la base de datos!");
-            }
+            
         } catch (SQLException e) {
             e.printStackTrace();
             throw new ServletException("Error al insertar la persona en la base de datos", e);
